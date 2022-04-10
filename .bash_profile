@@ -37,7 +37,13 @@ function __set_ps1()
     #region
     if [ $(git rev-parse --is-inside-work-tree 2>/dev/null) ]; then
         __PS1+='\[\e[1;90m\]'"――>("'\[\e[m\]'
-        __PS1+='\[\e[0;44m\]'"$(git branch --show-current)"'\[\e[m\]'
+        __PS1+='\[\e[0;44m\]'
+        if [ -n "$(git branch --show-current)" ]; then
+            __PS1+="$(git branch --show-current)"
+        else
+            __PS1+="HEAD~@$(git rev-parse --short HEAD)"
+        fi
+        __PS1+='\[\e[m\]'
         __PS1+='\[\e[1;90m\]'")"'\[\e[m\]'
     fi
     #endregion
