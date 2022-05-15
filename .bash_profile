@@ -86,11 +86,11 @@ HISTFILESIZE=1000
 # ============================================
 # ALIASES
 # ============================================
-alias aptfu='sudo apt full-upgrade'
-alias aptuu='sudo snap refresh; sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y --purge'
+alias aptuu='sudo snap refresh; sudo apt update -y && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y --purge'
 alias cp='cp --verbose'
 alias grep='grep --color=auto'
 alias histgrep='cat ~/.bash_history | grep'
+alias ln='ln --verbose'
 alias ls='ls --color=always --human-readable -lo'
 alias lsa='ls --almost-all'
 alias mkdir='mkdir --verbose --parents'
