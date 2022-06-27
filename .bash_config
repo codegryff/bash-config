@@ -1,0 +1,4 @@
+#!/bin/bash
+
+HISTSIZE=20
+HISTFILESIZE=1000
